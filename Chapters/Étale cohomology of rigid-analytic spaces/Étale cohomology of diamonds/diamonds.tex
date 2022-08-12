@@ -1,0 +1,56 @@
+\section{Diamonds}
+    \subsection{The pro-\'etale and v-topologies on perfectoid spaces}
+        \subsubsection{Set-theoretic issues}
+        
+        \subsubsection{Complement on perfectoid spaces}
+            We begin with a technical ingredient, the notions of injections and surjections for perfectoid spaces. 
+            \begin{definition}[Injections and surjections between perfectoid spaces] \label{def: injections_and_surjections_between_perfectoid_spaces}
+                A morphism $Y \to X$ of perfectoid spaces is said to be \textbf{injective} (respectively, \textbf{surjective}) if and only if for all $S \in \Ob(\Perfd)$, the corresponding map of points $Y(S) \to X(S)$ is an injective (respectively, surjective) function.
+            \end{definition}
+            \begin{remark}
+                It suffices to check injectivity and surjectivity of morphisms $f: Y \to X$ between perfectoid spaces by consideration of affinoid points, i.e. functions $Y(S) \to X(S)$ where $S$ is an affinoid perfectoid space. 
+            \end{remark}
+            \begin{remark}
+                Isomorphisms of perfectoid spaces are bijective.
+            \end{remark}
+            \begin{example}[Points]
+                Let $X$ be a perfectoid space and let $x \in |X|$ be a point thereof, which we shall view as a morphism of adic spaces $x: \Spa(\hat{\kappa}_x, \hat{\kappa}_x^{\circ}) \to X$; we might as well assume $X$ to be affinoid (in particular, a perfectoid affinoid neighbourhood of $x$) and isomorphic to $\Spa(R, R^+)$ for some perfectoid Huber pair $(R, R^+)$. Then the morphism $x: \Spa(\hat{\kappa}_x, \hat{\kappa}_x^{\circ}) \to \Spa(R, R^+)$ is injective (and hence points inject into general perfectoid spaces).
+            \end{example}
+            \begin{proposition}[An injectivity/surjectivity criterion] \label{prop: an_injectivity_surjectivity_criterion_for_morphisms_of_perfectoid_sapces}
+                \cite[Proposition 5.3]{scholze2021diamond} Let $f: Y \to X$ be a morphism perfectoid spaces. The following are equivalent:
+                    \begin{enumerate}
+                        \item $f: Y \to X$ is injective (respectively, surjective).
+                        \item The underlying map of topological spaces $|f|: |Y| \to |X|$ is injective (respectively, surjective) and for all points $y \in |Y|$ which corresponds to a rank-$1$ valuation and lies over some $x := |f|(y) \in |X|$, the corresponding ring map $\hat{\kappa}_x \to \hat{\kappa}_y$ between the completed residue fields is an isomorphism of non-archimedean fields. 
+                        \item For any perfectoid field $K$ and any open and bounded subring $K^+ \subset K$ therein, the induced map of $(K, K^+)$-points $f_*(K, K^+): Y(K, K^+) \to X(K, K^+)$ is injective (respectively, surjective). 
+                        \item If the given perfectoid spaces $Y, X$ are also qcqs, then the following is also equivalent to the previous three statements: for all algebraically closed perfectoid fields $C$ and any choice $C^+ \subset C$ of a bounded and open subring therein, the induced map of $(C, C^+)$-points $f_*(C, C^+): Y(C, C^+) \to X(C, C^+)$ is injective (respectively, surjective). 
+                    \end{enumerate}
+            \end{proposition}
+                \begin{proof}
+                            
+                \end{proof}
+            \begin{corollary}[Injections are stable under base-changes] \label{coro: injections_are_stable_under_base_changes}
+                Let $\iota: Z \to X$ be an injection of perfectoid spaces and let $f: X' \to X$ be an arbitrary morphism of perfectoid spaces. Then, the canonical projection $\iota': Z' \to X'$ from the pullback $Z' := Z \x_{\iota, X, f} X'$ (which exists in $\Perfd$ \textit{a priori}) will also be an injection of perfectoid spaces; at the same time, the underlying projection between topological spaces $|\iota'|: |Z'| \to |X|$ will be a homeomorphism. 
+                
+                As a consequence, a morphism of perfectoid spaces is injective if and only if it is universally injective.
+            \end{corollary}
+            
+            Let us now use the notion of injections of perfectoid spaces to study the separatedness of morphisms of perfectoid spaces, which is a task reliant on whether or not the diagonal is - in some apropriate sense - a closed immersion.
+            \begin{definition}[Immersions of perfectoid spaces] \label{def: immersions_of_perfectoid_spaces}
+                A morphism of perfectoid spaces $\iota: Z \to X$ is an \textbf{(open/closed) immersion} if and only if it is injective and the underlying map of topological spaces $|\iota|: |Z| \to |X|$ is a locally closed (respectively, open/closed) immersion.
+            \end{definition}
+            \begin{remark}[Immersions of general adic spaces] \label{remark: immersions_of_general_adic_spaces} 
+                Definition \ref{def: immersions_of_perfectoid_spaces} does not translate \textit{verbatim} to either the setting of schemes or that of adic spaces, as there, one needs to worry about the existence of nilpotent elements. 
+            \end{remark}
+            Remark \ref{remark: immersions_of_general_adic_spaces} prompts the following notions:
+            \begin{definition}
+                
+            \end{definition}
+        
+        \subsubsection{The pro-\'etale and v-topologies}
+    
+    \subsection{v-stacks and diamonds}
+        \subsubsection{v-descent and v-stacks}
+        
+        \subsubsection{Diamonds and small v-stacks}
+        
+        \subsubsection{Spatial diamonds and analytic spaces}
