@@ -2,7 +2,7 @@
     \subsection{The pro-\'etale and v-topologies on perfectoid spaces}
         \subsubsection{Set-theoretic issues}
         
-        \subsubsection{Complement on perfectoid spaces}
+        \subsubsection{Perfectoid spaces as representable geometric stacks}
             We begin with a technical ingredient, the notions of injections and surjections for perfectoid spaces. 
             \begin{definition}[Injections and surjections between perfectoid spaces] \label{def: injections_and_surjections_between_perfectoid_spaces}
                 A morphism $Y \to X$ of perfectoid spaces is said to be \textbf{injective} (respectively, \textbf{surjective}) if and only if for all $S \in \Ob(\Perfd)$, the corresponding map of points $Y(S) \to X(S)$ is an injective (respectively, surjective) function.
@@ -34,7 +34,7 @@
                 As a consequence, a morphism of perfectoid spaces is injective if and only if it is universally injective.
             \end{corollary}
             
-            Let us now use the notion of injections of perfectoid spaces to study the separatedness of morphisms of perfectoid spaces, which is a task reliant on whether or not the diagonal is - in some apropriate sense - a closed immersion.
+            Let us now use the notion of injections of perfectoid spaces to study the separatedness of morphisms of perfectoid spaces, which is a task reliant on whether or not the diagonal is - in some apropriate sense - a closed immersion. 
             \begin{definition}[Immersions of perfectoid spaces] \label{def: immersions_of_perfectoid_spaces}
                 A morphism of perfectoid spaces $\iota: Z \to X$ is an \textbf{(open/closed) immersion} if and only if it is injective and the underlying map of topological spaces $|\iota|: |Z| \to |X|$ is a locally closed (respectively, open/closed) immersion.
             \end{definition}
@@ -42,8 +42,41 @@
                 Definition \ref{def: immersions_of_perfectoid_spaces} does not translate \textit{verbatim} to either the setting of schemes or that of adic spaces, as there, one needs to worry about the existence of nilpotent elements. 
             \end{remark}
             Remark \ref{remark: immersions_of_general_adic_spaces} prompts the following notions:
-            \begin{definition}
+            \begin{definition}[Zariski-closed morphisms] \label{def: zariski_closed_morphisms}
+                An immersion of affinoid perfectoid spaces $f: \Spa(S, S^+) \hookrightarrow \Spa(R, R^+)$ is said to be:
+                    \begin{enumerate}
+                        \item \textbf{Zariski-closed} if and only if there exists a homeomorphism $|Z| \cong |\Spec R/I|$ for some ideal $I \subset R$.
+                        \item \textbf{strongly Zariski-closed} if and only if the corresponding ring map $R \to S$ is surjective and $S^+/R^+$ is the integral closure of $R^+$ inside $S$.
+                    \end{enumerate}
+            \end{definition}
+            \begin{proposition}[Zariski-closed implies strongly Zariski-closed] \label{prop: zariski_closed_implies_strongly_zariski_closed}
+                For immersions of affinoid perfectoid spaces $f: Z \hookrightarrow X$, being Zariski-closed strictly implies being strongly Zariski-closed.
+            \end{proposition}
+                \begin{proof}
+                    
+                \end{proof}
+            \begin{remark}[Perfectoid spaces as geometric stacks ?] 
+                Let us firstly recall the following definition of schemes: a scheme over a commutative ring $k$ is a sheaf $X: (\Sch_{/\Spec k}^{\aff})_{\Zar}^{\op} \to \Sets$ such that the diagonal $\Delta_{X/k}: X \to X \x_{\Spec k} X$ is representable by affine $k$-schemes, and such that it admits a cover by Zariski-open immersions $U \hookrightarrow X$ from affine $k$-schemes $U$.
                 
+                In the sequel, we shall attempt to re-conceptualise perfectoid spaces in this manner. Specifically, 
+            \end{remark}
+            \begin{definition}[Representable morphisms of perfectoid spaces] \label{def: representable_morphisms_of_perfectoid_spaces}
+                A morphism $f: \scrY \to \scrX$ of sheaves of sets on $\Perfd^{\affd}_{\an}$ is said to be \textbf{representable by affinoids} if and only if for all morphisms $u: U \to \scrX$ from an affinoid perfectoid space $U$, the pullback $\scrX \x_{f, \scrY, u} U$ is also an affinoid perfectoid space. 
+            \end{definition}
+            \begin{lemma}[Diagonals of perfectoid spaces are representable by affinoids] \label{lemma: diagonals_of_perfectoid_spaces_are_representable_by_affinoids}
+                Let $f: Y \to X$ be a morphism of perfectoid spaces. Then, the diagonal $\Delta_{Y/X}: Y \to Y \x_X Y$ is representable by affinoid perfectoid spaces.
+            \end{lemma}
+                \begin{proof}
+                    
+                \end{proof}
+            \begin{proposition}[Diagonals of perfectoid spaces are immersions] \label{prop: diagonals_of_perfectoid_spaces_are_immersions} 
+                Let $f: Y \to X$ be a morphism of perfectoid spaces. Then, the diagonal $\Delta_{Y/X}: Y \to Y \x_X Y$ is an immersion.
+            \end{proposition}
+                \begin{proof}
+                    
+                \end{proof}
+            \begin{definition}[Separated perfectoid spaces] \label{def: separated_perfectoid_spaces}
+                A morphism of perfectoid spaces $f: Y \to X$ is called \textbf{separated} if and only if its diagonal $\Delta_{Y/X}: Y \to Y \x_X Y$ is a Zariski-closed immersion.
             \end{definition}
         
         \subsubsection{The pro-\'etale and v-topologies}
