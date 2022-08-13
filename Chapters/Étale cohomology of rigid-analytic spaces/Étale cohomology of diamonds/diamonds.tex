@@ -58,7 +58,7 @@
             \begin{remark}[Perfectoid spaces as geometric stacks ?] 
                 Let us firstly recall the following definition of schemes: a scheme over a commutative ring $k$ is a sheaf $X: (\Sch_{/\Spec k}^{\aff})_{\Zar}^{\op} \to \Sets$ such that the diagonal $\Delta_{X/k}: X \to X \x_{\Spec k} X$ is representable by affine $k$-schemes, and such that it admits a cover by Zariski-open immersions $U \hookrightarrow X$ from affine $k$-schemes $U$.
                 
-                In the sequel, we shall attempt to re-conceptualise perfectoid spaces in this manner. Specifically, 
+                In the sequel, we shall attempt to re-conceptualise perfectoid spaces in this manner. Specifically, we shall see that in fact, perfectoid spaces are sheaves $X: (\Perfd^{\aff}_{\rat})^{\op} \to \Sets$ such that the diagonal $\Delta_X: X \to X \x X$ is representable by affinoid perfectoid spaces, and such that it admits a cover by rational open immersions $U \hookrightarrow X$ from affinoid perfectoid open adic subspaces. 
             \end{remark}
             \begin{definition}[Representable morphisms of perfectoid spaces] \label{def: representable_morphisms_of_perfectoid_spaces}
                 A morphism $f: \scrY \to \scrX$ of sheaves of sets on $\Perfd^{\affd}_{\an}$ is said to be \textbf{representable by affinoids} if and only if for all morphisms $u: U \to \scrX$ from an affinoid perfectoid space $U$, the pullback $\scrX \x_{f, \scrY, u} U$ is also an affinoid perfectoid space. 
@@ -76,10 +76,93 @@
                     
                 \end{proof}
             \begin{definition}[Separated perfectoid spaces] \label{def: separated_perfectoid_spaces}
-                A morphism of perfectoid spaces $f: Y \to X$ is called \textbf{separated} if and only if its diagonal $\Delta_{Y/X}: Y \to Y \x_X Y$ is a Zariski-closed immersion.
+                A morphism of perfectoid spaces $f: Y \to X$ is called \textbf{separated} if and only if its diagonal $\Delta_{Y/X}: Y \to Y \x_X Y$ is a rational closed immersion (in the sense of definition \ref{def: immersions_of_perfectoid_spaces}).
             \end{definition}
+            \begin{remark}
+                As it turns out, there is a valuative criterion for separatedness in the setting of perfectoid spaces as well. The difference from the valuative criterion for separatedness of schemes is minimal, at least from the conceptual standpoint, so before we establish the result for perfectoid spaces, let us review the classical one for schemes.
+                
+                To that end, recall that if $f: Y \to X$ is a quasi-separated morphism of schemes, then it is separated if and only if for all non-archimedean fields $K$ and all commutative diagrams of the following form, wherein the arrow $\Spec K \to \Spec K^{\circ}$ is the canonical one:
+                    $$
+                        \begin{tikzcd}
+                        	{\Spec K} & Y \\
+                        	{\Spec K^{\circ}} & X
+                        	\arrow["f", from=1-2, to=2-2]
+                        	\arrow[from=1-1, to=2-1]
+                        	\arrow[from=2-1, to=2-2]
+                        	\arrow[from=1-1, to=1-2]
+                        \end{tikzcd}
+                    $$
+                there exists at most one lifting $\Spec K^{\circ} \to Y$ (the dashed arrow) fitting into the aforementioned commutative square as follows:
+                    $$
+                        \begin{tikzcd}
+                        	{\Spec K} & Y \\
+                        	{\Spec K^{\circ}} & X
+                        	\arrow["f", from=1-2, to=2-2]
+                        	\arrow[from=1-1, to=2-1]
+                        	\arrow[from=2-1, to=2-2]
+                        	\arrow[from=1-1, to=1-2]
+                        	\arrow[dashed, from=2-1, to=1-2]
+                        \end{tikzcd}
+                    $$
+            \end{remark}
+            \begin{theorem}[A valuative criterion for separatedness] \label{theorem: valuative_criterion_for_separatedness_for_morphisms_of_perfectoid_spaces}
+                Let $f: Y \to X$ be a morphism of perfectoid spaces. The following are equivalent:
+                    \begin{enumerate}
+                        \item $f: Y \to X$ is separated.
+                        \item The map of topological spaces $|\delta_{Y/X}|: |Y| \to |Y \x_X Y|$ underlying the diagonal $\Delta_{Y/X}$ is a closed immersion.
+                        \item $f: Y \to X$ is quasi-separated, and for all perfectoid fields $K$ chosen along with a fixed open and bounded subring $K^+ \subset K$, and for all commutative diagrams of the following form, wherein the arrow $\Spa(K, K^{\circ}) \to \Spa(K, K^+)$ is the canonical one:
+                            $$
+                                \begin{tikzcd}
+                                	{\Spa(K, K^{\circ})} & Y \\
+                                	{\Spa(K, K^+)} & X
+                                	\arrow["f", from=1-2, to=2-2]
+                                	\arrow[from=1-1, to=2-1]
+                                	\arrow[from=2-1, to=2-2]
+                                	\arrow[from=1-1, to=1-2]
+                                \end{tikzcd}
+                            $$
+                        there exists at most one lifting $\Spa(K, K^+) \to Y$ (the dashed arrow) fitting into the aforementioned commutative square as follows:
+                            $$
+                                \begin{tikzcd}
+                                	{\Spa(K, K^{\circ})} & Y \\
+                                	{\Spa(K, K^+)} & X
+                                	\arrow["f", from=1-2, to=2-2]
+                                	\arrow[from=1-1, to=2-1]
+                                	\arrow[from=2-1, to=2-2]
+                                	\arrow[from=1-1, to=1-2]
+                                	\arrow[dashed, from=2-1, to=1-2]
+                                \end{tikzcd}
+                            $$
+                    \end{enumerate}
+            \end{theorem}
+                \begin{proof}
+                    \noindent
+                    \begin{enumerate}
+                        \item 
+                        \item 
+                        \item 
+                    \end{enumerate}
+                \end{proof}
         
-        \subsubsection{The pro-\'etale and v-topologies}
+        \subsubsection{The (pro-)\'etale and v-topologies}
+            We begin with the following important result from \cite{scholze2011perfectoid}.
+            \begin{theorem}[Scholze's perfectoid version of Falting's Almost Purity Theorem] \label{theorem: almost_purity_perfectoid_version}
+                Let $R$ be a perfectoid ring\footnote{Which we might as well assume to be of mixed characteristic $(0, p)$, for some prime $p$.}. Then:
+                    \begin{enumerate}
+                        \item For $R$-algebras, being finite-\'etale implies being perfectoid.
+                        \item There is an equivalence of categories:
+                            $$(-)^{\flat}: \{\text{Finite-\'etale $R$-algebras}\} \to \{\text{Finite-\'etale $R^{\flat}$-algebras}\}$$
+                        \item For any finite-\'etale $R$-algebra $S$, the subring $S^{\circ} \subseteq S$ of power-bounded elements of $S$ is almost finite-\'etale over the subring $R^{\circ} \subseteq R$ of power-bounded elements of $R$.
+                    \end{enumerate}
+            \end{theorem}
+                \begin{proof}
+                    \noindent
+                    \begin{enumerate}
+                        \item 
+                        \item 
+                        \item 
+                    \end{enumerate}
+                \end{proof}
     
     \subsection{v-stacks and diamonds}
         \subsubsection{v-descent and v-stacks}
